@@ -8,7 +8,7 @@
     props.onAuth({ username: value, secret: value });
     
   
-    axios.post("http://localhost:3005/authenticate", { username: value })
+    axios.post("https://justchatapp.cyclic.app/authenticate", { username: value })
     .then((r) => props.onAuth({ ...r.data, secret: value }))
     .catch((e) => console.log("Auth Error", e));
 };
